@@ -5,11 +5,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CategoriaService } from '../services/domain/categoria.service';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -20,6 +22,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 BrowserModule,
+                HttpClientModule,
                 IonicModule.forRoot(MyApp),
             ],
             bootstrap: [IonicApp],
@@ -29,7 +32,8 @@ var AppModule = /** @class */ (function () {
             providers: [
                 StatusBar,
                 SplashScreen,
-                { provide: ErrorHandler, useClass: IonicErrorHandler }
+                { provide: ErrorHandler, useClass: IonicErrorHandler },
+                CategoriaService
             ]
         })
     ], AppModule);
