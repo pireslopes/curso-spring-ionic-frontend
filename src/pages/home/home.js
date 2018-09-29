@@ -9,11 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular/navigation/ionic-page';
 var HomePage = /** @class */ (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
     HomePage = __decorate([
+        IonicPage(),
         Component({
             selector: 'page-home',
             templateUrl: 'home.html'
