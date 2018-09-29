@@ -14,6 +14,9 @@ var HomePage = /** @class */ (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    HomePage.prototype.login = function () {
+        this.navCtrl.setRoot('CategoriasPage');
+    };
     HomePage = __decorate([
         IonicPage(),
         Component({
