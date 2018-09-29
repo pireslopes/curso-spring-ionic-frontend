@@ -10,10 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular/navigation/ionic-page';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
+    function HomePage(navCtrl, menu) {
         this.navCtrl = navCtrl;
+        this.menu = menu;
     }
+    HomePage.prototype.ionViewWillEnter = function () {
+        this.menu.swipeEnable(false);
+    };
+    HomePage.prototype.ionViewDidLeave = function () {
+        this.menu.swipeEnable(true);
+    };
     HomePage.prototype.login = function () {
         this.navCtrl.setRoot('CategoriasPage');
     };
@@ -23,7 +31,7 @@ var HomePage = /** @class */ (function () {
             selector: 'page-home',
             templateUrl: 'home.html'
         }),
-        __metadata("design:paramtypes", [NavController])
+        __metadata("design:paramtypes", [NavController, MenuController])
     ], HomePage);
     return HomePage;
 }());
