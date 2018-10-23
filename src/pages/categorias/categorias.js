@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoriaService } from '../../services/domain/categoria.service';
+import { API_CONFIG } from '../../config/api.config';
 /**
  * Generated class for the CategoriasPage page.
  *
@@ -21,11 +22,13 @@ var CategoriasPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.categoriaService = categoriaService;
+        this.bucketUrl = API_CONFIG.bucketUrl;
     }
     CategoriasPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
         this.categoriaService.findAll()
             .subscribe(function (success) {
-            console.log(success);
+            _this.items = success;
         }, function (error) {
             console.log(error);
         });

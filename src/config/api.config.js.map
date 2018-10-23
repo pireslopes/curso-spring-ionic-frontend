@@ -1,1 +1,1 @@
-{"version":3,"file":"api.config.js","sourceRoot":"","sources":["api.config.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,IAAM,UAAU,GAAG;IACxB,OAAO,EAAE,uBAAuB;CACjC,CAAA"}
+{"version":3,"file":"api.config.js","sourceRoot":"","sources":["api.config.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,IAAM,UAAU,GAAG;IACxB,OAAO,EAAE,uBAAuB;IAChC,SAAS,EAAE,6CAA6C;CACzD,CAAA"}
