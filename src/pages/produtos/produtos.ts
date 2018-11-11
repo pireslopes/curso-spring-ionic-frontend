@@ -39,4 +39,8 @@ export class ProdutosPage {
     });
   }
 
+  showDetail(produtoId: string) {
+    this.navCtrl.push('ProdutoDetailPage', { produtoId: produtoId });
+  }
+
 }
